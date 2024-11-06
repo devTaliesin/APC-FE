@@ -1,0 +1,38 @@
+.contents {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    flex:1 ;
+}
+
+.selectedVideoContainer {
+    background-color: #47B793;
+    border-radius: 20px;
+    aspect-ratio: 16 / 9;
+    padding:5px;
+}
+
+.selectedVideoView {
+    width: calc(100% - 10px);
+    background-color: #D4FFE8;
+    border-radius: 20px;
+    aspect-ratio: 16 / 9;
+    padding:5px;
+}
+
+.metadataMonitor{
+    display: flex;
+    flex-direction: row;
+    flex:1 ;
+    background-color: #47B793;
+    border-radius: 20px;
+    padding:5px;
+    gap: 5px
+}
+
+.contentsContainer{
+    display: flex;
+    flex:1;
+    background-color: #D4FFE8;
+    border-radius: 20px;
+}

@@ -1,0 +1,17 @@
+.videoList {
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    gap:5px;
+    width: calc((1920 - 1450) / 1920 * 100%);
+    background-color: #47B793;
+    border-radius: 20px;
+}
+.miniVideoView {
+    display: flex;
+    width: calc(100% - 10px);
+    background-color: #D4FFE8;
+    border-radius: 20px;
+    aspect-ratio: 16 / 9;
+    padding:5px;
+}
