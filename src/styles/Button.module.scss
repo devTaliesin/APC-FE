@@ -1,8 +1,14 @@
 .iconButton {
-    width: 40px
-    height 40px
+    background-color: #D4FFE8;
+    border-radius: 15px;
+    margin:0;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    
 }
 .iconButton:hover {
+    background-color: #a8ccb9;
 }
 
 .textButton {
@@ -11,5 +17,5 @@
     padding-left: 15;
 }
 .textButton:hover {
-
+    background-color: #a8ccb9;
 }

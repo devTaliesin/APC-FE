@@ -5,8 +5,10 @@ import {VideoSourceStore} from "../stores/video_source_store"
 const videoListHook = () => {
   const { setVideoSourceArray } = VideoSourceStore();
   useEffect(()=> {
+
     const getVideoSourceList = async () => {
       const videoSource = await videoSourceList();
+      if (videoSource === undefined) return;
       setVideoSourceArray(videoSource)
     }
     getVideoSourceList();

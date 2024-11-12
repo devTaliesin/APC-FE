@@ -8,7 +8,8 @@ const VideoList = () => {
     videoListHook();
     return (
         <div className={styles.videoList}>
-        {videoSourceArray && videoSourceArray.map((videoSource)=>
+        {videoSourceArray &&
+        videoSourceArray.map((videoSource)=>
             <MiniVideoView videoSource={videoSource}/>
         )}
         </div>
