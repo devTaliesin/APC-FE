@@ -10,7 +10,10 @@ const VideoList = () => {
         <div className={styles.videoList}>
         {videoSourceArray &&
         videoSourceArray.map((videoSource)=>
-            <MiniVideoView videoSource={videoSource}/>
+            <MiniVideoView
+            videoSource={videoSource}
+            key={`${videoSource.id}`}
+            />
         )}
         </div>
     )

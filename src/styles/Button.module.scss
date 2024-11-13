@@ -1,16 +1,21 @@
 .iconButton {
+    display: flex;
     background-color: #D4FFE8;
+    justify-content: center;
+    align-items: center;
     border-radius: 15px;
     margin:0;
     width: 40px;
     height: 40px;
     cursor: pointer;
-    
 }
 .iconButton:hover {
     background-color: #a8ccb9;
 }
-
+.settingButton {
+    position: absolute;
+    bottom: 5px;
+}
 .textButton {
     display: flex;
     align-items: flex-start;
@@ -18,4 +23,13 @@
 }
 .textButton:hover {
     background-color: #a8ccb9;
+}
+
+.submitButton{
+    padding: 10px;
+    margin-bottom: 25px;
+    background-color: #D4FFE8;
+    color: #34866c;
+    font-weight: bold;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
 }

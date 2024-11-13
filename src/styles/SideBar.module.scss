@@ -2,12 +2,19 @@
     display: inline-block;
 }
 
+.line{
+    background-color: #D4FFE8;
+    width: 100%;
+    height: 2px
+}
+
 .fullSideBarButton {
     display: inline-block;
 }
 
 .miniSideBar {
     display: flex;
+    position: relative;
     flex-direction:column;
     align-items: center;
     gap: 5px;

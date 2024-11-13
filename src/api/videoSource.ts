@@ -1,5 +1,13 @@
 import { AxiosInstance } from "axios";
 
+interface videoSourceForm {
+  ip: string;
+  port: number | undefined;
+  name: string;
+  user: string;
+  pass: string;
+}
+
 const videoSource = (api: AxiosInstance) => {
   const videoSourceList = async () => {
     try{
@@ -14,9 +22,32 @@ const videoSource = (api: AxiosInstance) => {
         throw error;
     }
   }
+
+  const addVideoSource = async (data:videoSourceForm) => {
+    try{
+        const response = await api.post('/video_source/create', data);
+        if (response.status === 201) {
+          return response.data
+        } else if (response.status === 502) {
+          console.error(response.data.message);
+        } else if (response.status === 401) {
+          console.error(response.data.message);
+        } else if (response.status === 503) {
+          console.error(response.data.message);
+        } else if (response.status === 500) {
+          console.error(response.data.message);
+        }
+    } catch (error){
+        console.error('addVideoSource failed:', error);
+        throw error;
+    }
+  }
+
+
   return {
     videoSourceList,
+    addVideoSource,
   }
 }
 
-export default videoSource
+export {videoSource, type videoSourceForm} 

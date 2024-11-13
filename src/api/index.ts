@@ -1,6 +1,6 @@
 import axios from 'axios';
 import event from './event';
-import videoSource from './videoSource'
+import { videoSource, videoSourceForm } from './videoSource'
 
 const api = axios.create({
   baseURL: 'http://localhost:3000',
@@ -15,11 +15,14 @@ const {
 } = event(api)
 
 const {
-  videoSourceList
+  videoSourceList,
+  addVideoSource
 } = videoSource(api)
 
 export {
   dailyVideoRead,
   dailyFaceIdRead,
-  videoSourceList
+  videoSourceList,
+  addVideoSource,
+  type videoSourceForm,
 }
