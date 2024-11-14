@@ -1,15 +1,37 @@
 .iconButton {
-    width: 40px
-    height 40px
-}
-.iconButton:hover {
+    display: flex;
+    background-color: #d4ffe8;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    margin: 0;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
 }
 
+.iconButton:hover {
+    filter: brightness(0.8) grayscale(50%);
+}
+.settingButton {
+    position: absolute;
+    bottom: 5px;
+}
 .textButton {
     display: flex;
     align-items: flex-start;
     padding-left: 15;
 }
 .textButton:hover {
+    filter: brightness(0.8) grayscale(50%);
+}
 
+.submitButton {
+    padding: 10px;
+    margin-bottom: 25px;
+    background-color: #d4ffe8;
+    color: #34866c;
+    font-weight: bold;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
 }
