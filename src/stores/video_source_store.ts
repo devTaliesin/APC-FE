@@ -1,18 +1,13 @@
 import { create } from 'zustand'
+import { VideoSourceInterface } from '../interfaces/video_source.interface';
 
-interface VideoSourceArray {
-  id:number;
-  onvif: string;
-  name: string;
-  rtsp: string;
-}
 type VideoSourceStoreType = {
-    videoSourceArray: VideoSourceArray[] | null
-    setVideoSourceArray: ( videoSourceArray: VideoSourceArray[] | null ) => void
+    videoSourceArray: VideoSourceInterface[] | undefined
+    setVideoSourceArray: ( videoSourceArray: VideoSourceInterface[] | undefined ) => void
 };
 const VideoSourceStore = create<VideoSourceStoreType>((set) => ({
-    videoSourceArray: null,
-    setVideoSourceArray: (videoSourceArray: VideoSourceArray[] | null) => set({videoSourceArray: videoSourceArray})
+    videoSourceArray: undefined,
+    setVideoSourceArray: (videoSourceArray: VideoSourceInterface[] | undefined) => set({videoSourceArray: videoSourceArray})
 }))
 
-export { VideoSourceStore, type VideoSourceArray }
+export { VideoSourceStore }

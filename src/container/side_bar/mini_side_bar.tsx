@@ -20,7 +20,7 @@ const MiniSideBar = () => {
             onClick={changeSideBarSizeFlag}
             icon={sideBarSize}
             />
-            <line className={styles.line}/>
+            <div className={styles.line}/>
             {videoSourceArray &&
             videoSourceArray.map((videonSource)=>
                 <IconButton

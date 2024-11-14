@@ -9,6 +9,7 @@ interface videoSourceForm {
 }
 
 const videoSource = (api: AxiosInstance) => {
+
   const videoSourceList = async () => {
     try{
         const response = await api.get('/video_source/read');
@@ -42,7 +43,6 @@ const videoSource = (api: AxiosInstance) => {
         throw error;
     }
   }
-
 
   return {
     videoSourceList,

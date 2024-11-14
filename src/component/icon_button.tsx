@@ -1,15 +1,16 @@
-import { ComponentProps, ReactNode } from 'react';
+import { ComponentProps } from 'react';
 import styles from '../styles/Button.module.scss'
 
 interface IconButtonProps extends ComponentProps<'div'> {
     onClick?: () => void;
-    icon: string
+    icon?: string
+    className?: string
 }
-const IconButton = ({onClick, icon}: IconButtonProps) => {
+const IconButton = ({onClick, icon, className}: IconButtonProps) => {
 
     return (
-        <div className={styles.iconButton} onClick={onClick}>
-            <img src={icon} alt={icon.split('/').pop()}/>
+        <div className={className || styles.iconButton} onClick={onClick}>
+            {icon && <img src={icon} alt={icon.split('/').pop()}/>}
         </div>
     )
 }
